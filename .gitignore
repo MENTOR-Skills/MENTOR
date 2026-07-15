@@ -1,0 +1,33 @@
+# Git 忽略规则
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+.env.*
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# 用户课题运行产物（本地生成，不进技能包仓库）
+campus-research-output/
+
+# 论文全文与大数据（示例目录若需小样例 PDF，请显式 force-add）
+**/pdfs/
+*.pdf
+!examples/**/*.md
+
+# 临时与日志
+*.log
+.tmp/
+.cache/
+
+# 可选：本地 Agent 配置
+.cursor/skills/
