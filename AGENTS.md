@@ -29,7 +29,7 @@
 | 用户意图关键词 | 进入功能 | 对应技能链 | 深度档 |
 |--------------|----------|-----------|--------|
 | "入门""不了解""完全陌生""怎么开始""学什么" | **F1 陌生领域入门** | `domain-onboarding` | 默认标准 |
-| "找论文""文献""综述""相关工作""有哪些经典""关系" | **F2 文献全景** | 调度 → 检索 → 精读入库 → 全景撰写 → 可视化 | 默认标准 |
+| "找论文""文献""综述""相关工作""有哪些经典""关系" | **F2 文献全景** | 调度 → 检索 → 精读入库 → 全景撰写 →（可选）综述撰写 → 可视化 | 默认标准 |
 | "读这篇""这篇论文""读懂""复现" | **F3 单篇深读** | `paper-deep-read` → `literature-reader` | 默认标准 |
 | "总结""进展""这周干了什么""阶段""日志""实验结果" | **F4 阶段总结** | `progress-digest` | 默认标准 |
 | "写""组会""汇报""PPT""一页纸""技术说明" | **F5 学术写作** | `academic-writing` 或 `meeting-brief` | 默认标准 |
@@ -61,7 +61,7 @@
 | 功能 | 交付文件 | 格式 |
 |------|---------|------|
 | F1 | `learning-map.md`、`prerequisite-gap.md`、`glossary.md`、`starter-resources.md`、`first-practice.md` | Markdown |
-| F2 | `references.json`、`literature-landscape.md`、`reading-shortlist.md`、`viz/index.html` | JSON + Markdown + HTML |
+| F2 | `references.json`、`literature-landscape.md`、`reading-shortlist.md`、`viz/index.html`；可选扩展 `survey.md` / `related-work.md` | JSON + Markdown + HTML |
 | F3 | `reading-reports/<id>.md`、回写 `references.json` | Markdown + JSON |
 | F4 | `artifact-index.md`、`progress-report.md`、`result-summary.md`、`blockers.md` | Markdown |
 | F5 | `_work/claims-evidence.md`、`stage-writeup.md` / `meeting-one-pager.md` / `qna-prep.md` | Markdown |
@@ -124,10 +124,11 @@
 | 文献检索下载 | `skills/literature-search-download/` | F2 执行 | 分级检索、去重、候选 |
 | 文献精读入库 | `skills/literature-reader/` | F2+F3 执行 | 写入结构化文献库 |
 | 文献全景撰写 | `skills/literature-landscape-writer/` | F2 执行 | 基于文献库写全景说明 |
+| 综述撰写 | `skills/survey-writer/` | F2 扩展 | 长篇 `survey.md` 或 Related Work |
 | 引用核对 | `skills/citation-verifier/` | F2 自动 | 核对引用真实性与完整性 |
 | 关系可视化 | `skills/survey-visualizer/` | F2 执行 | 基于文献库生成关系图网页 |
 | 单篇深读 | `skills/paper-deep-read/` | F3 工作流 | 三种深度模式 |
-| 阶段进展 | `skills/progress-digest/` | F4 工作流 | 材料索引 + 阶段报告 |
+| 阶段进展 | `skills/progress-digest/` | F4 工作流 | 材料索引 + 阶段报告 + 结果摘要 + 阻塞清单 |
 | 学术写作 | `skills/academic-writing/` | F5 工作流 | 主张—证据 + 成稿 |
 | 组会材料 | `skills/meeting-brief/` | F5 工作流 | 组会专用分支 |
 | 挑刺审阅 | `skills/adversarial-lite/` | F5 内部 | 质疑与修改建议 |

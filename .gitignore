@@ -26,8 +26,15 @@ campus-research-output/
 
 # 临时与日志
 *.log
+!examples/**/*.log
 .tmp/
 .cache/
+_smoke*/
+_smoke_f2/
+
+# 测试跑场产物（保留目录占位）
+tests/runs/*
+!tests/runs/.gitkeep
 
 # 可选：本地 Agent 配置
 .cursor/skills/

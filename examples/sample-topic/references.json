@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "topic": "attention mechanisms for sequence modeling (sample)",
+    "created": "2026-07-17",
+    "search": {
+      "note": "Fixture for F2/F3 field alignment; not a real survey corpus."
+    },
+    "audit": null
+  },
+  "papers": [
+    {
+      "id": "1706.03762",
+      "title": "Attention Is All You Need",
+      "authors": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Niki Parmar",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Aidan N. Gomez",
+        "Lukasz Kaiser",
+        "Illia Polosukhin"
+      ],
+      "year": 2017,
+      "venue": "NeurIPS",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "doi": null,
+      "arxiv_id": "1706.03762",
+      "pdf_path": "",
+      "access_status": "fulltext",
+      "abstract": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks. We propose the Transformer, based solely on attention mechanisms.",
+      "peer_reviewed": true,
+      "reading_notes": {
+        "problem": "序列转导过度依赖 RNN/CNN，并行与长程依赖受限。",
+        "method": "纯注意力的 Transformer：多头自注意力与位置编码。",
+        "results": "在机器翻译等任务上达到或超过当时强基线，训练更可并行。",
+        "limitations": "对位置信息与计算复杂度仍有后续改进空间。",
+        "source_spans": ["Abstract", "§3"]
+      },
+      "relations": [
+        {
+          "target_id": "2005.14165",
+          "kind": "方法继承",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "id": "2005.14165",
+      "title": "Language Models are Few-Shot Learners",
+      "authors": [
+        "Tom B. Brown",
+        "Benjamin Mann",
+        "Nick Ryder",
+        "Melanie Subbiah",
+        "Jared Kaplan"
+      ],
+      "year": 2020,
+      "venue": "NeurIPS",
+      "url": "https://arxiv.org/abs/2005.14165",
+      "doi": null,
+      "arxiv_id": "2005.14165",
+      "pdf_path": "",
+      "access_status": "fulltext",
+      "abstract": "We demonstrate that scaling up language models greatly improves task-agnostic, few-shot performance.",
+      "peer_reviewed": true,
+      "reading_notes": {
+        "problem": "如何在少样本设定下提升语言模型的任务泛化。",
+        "method": "大规模自回归语言模型（GPT-3）与上下文学习。",
+        "results": "少样本表现随规模显著提升，可接近部分微调基线。",
+        "limitations": "训练与推理成本高；公平性与幻觉等问题仍突出。",
+        "source_spans": ["Abstract"]
+      },
+      "relations": []
+    },
+    {
+      "id": "1810.04805",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "authors": [
+        "Jacob Devlin",
+        "Ming-Wei Chang",
+        "Kenton Lee",
+        "Kristina Toutanova"
+      ],
+      "year": 2019,
+      "venue": "NAACL",
+      "url": "https://arxiv.org/abs/1810.04805",
+      "doi": null,
+      "arxiv_id": "1810.04805",
+      "pdf_path": "",
+      "access_status": "abstract_only",
+      "abstract": "We introduce BERT, which pre-trains deep bidirectional representations from unlabeled text.",
+      "peer_reviewed": true,
+      "reading_notes": {
+        "problem": "单向语言模型预训练限制了上下文表示。",
+        "method": "掩码语言模型与下一句预测的双向 Transformer 预训练。",
+        "results": "多项 NLP 理解任务显著提升（摘要级转述，样本未附全文核验）。",
+        "limitations": "本样本标为 abstract_only，数字细节未从全文核对。",
+        "source_spans": ["Abstract"]
+      },
+      "relations": [
+        {
+          "target_id": "1706.03762",
+          "kind": "方法继承",
+          "basis": "fact"
+        }
+      ]
+    }
+  ]
+}
