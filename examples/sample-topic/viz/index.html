@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sample Literature Landscape</title>
+<style>
+:root { --bg:#f7f4ef; --ink:#1c1917; --accent:#0f766e; --card:#fff; --muted:#78716c; }
+body { margin:0; font-family:"Segoe UI","PingFang SC","Noto Sans SC",sans-serif;
+  background:linear-gradient(160deg,#f7f4ef,#e7eef0 50%,#f0ebe3); color:var(--ink); }
+header { padding:2.5rem 1.5rem 1rem; max-width:960px; margin:0 auto; }
+h1 { font-size:1.75rem; margin:0 0 .5rem; }
+.sub { color:var(--muted); }
+main { max-width:960px; margin:0 auto; padding:0 1.5rem 3rem; display:grid; gap:1rem; }
+section { background:var(--card); border-radius:12px; padding:1.25rem 1.5rem; box-shadow:0 1px 0 rgba(28,25,23,.06); }
+h2 { font-size:1.05rem; margin:0 0 1rem; color:var(--accent); }
+.bar { display:grid; grid-template-columns:140px 1fr 2rem; gap:.5rem; align-items:center; margin:.35rem 0; }
+.lab { font-size:.8rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.track { background:#e7e5e4; border-radius:999px; height:10px; overflow:hidden; }
+.fill { display:block; height:100%; background:var(--accent); border-radius:999px; }
+.n { font-size:.8rem; text-align:right; }
+table { width:100%; border-collapse:collapse; font-size:.85rem; }
+th,td { border-bottom:1px solid #e7e5e4; padding:.45rem .35rem; text-align:left; vertical-align:top; }
+th { color:var(--muted); font-weight:600; }
+.muted { color:var(--muted); }
+.legend { display:flex; gap:1.25rem; flex-wrap:wrap; font-size:.85rem; margin-bottom:.75rem; align-items:center; }
+.legend .sw { display:inline-block; width:28px; height:0; border-top:3px solid #0f766e; vertical-align:middle; margin-right:.35rem; }
+.legend .sw.dash { border-top-style:dashed; border-top-color:#a8a29e; }
+svg .svg-lab { font-size:11px; fill:var(--ink); }
+svg .svg-muted { font-size:13px; fill:var(--muted); }
+footer { max-width:960px; margin:0 auto; padding:0 1.5rem 2rem; font-size:.75rem; color:var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Sample Literature Landscape</h1>
+  <p class="sub">From references.json · 3 papers · relations not invented</p>
+</header>
+<main>
+  <section><h2>关系图</h2><div class="legend"><span><i class="sw solid"></i> fact</span><span><i class="sw dash"></i> inferred</span><span class="muted">2 edge(s)</span></div><svg viewBox="0 0 720 420" width="100%" role="img" aria-label="Paper relation graph"><defs><marker id="arrow-fact" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#0f766e"/></marker><marker id="arrow-inf" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#a8a29e"/></marker></defs>
+<line x1="369.0" y1="66.0" x2="489.2" y2="274.2" stroke="#a8a29e" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow-inf)"><title>方法继承 (inferred)</title></line>
+<line x1="230.8" y1="274.2" x2="351.0" y2="66.0" stroke="#0f766e" stroke-width="2" marker-end="url(#arrow-fact)"><title>方法继承 (fact)</title></line>
+<circle cx="360.0" cy="50.4" r="14" fill="#fff" stroke="#0f766e" stroke-width="2"><title>Attention Is All You Need</title></circle><text x="360.0" y="82.4" text-anchor="middle" class="svg-lab">2017 · Attention Is All You…</text>
+<circle cx="498.2" cy="289.8" r="14" fill="#fff" stroke="#0f766e" stroke-width="2"><title>Language Models are Few-Shot Learners</title></circle><text x="498.2" y="321.8" text-anchor="middle" class="svg-lab">2020 · Language Models are …</text>
+<circle cx="221.8" cy="289.8" r="14" fill="#fff" stroke="#0f766e" stroke-width="2"><title>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</title></circle><text x="221.8" y="321.8" text-anchor="middle" class="svg-lab">2019 · BERT: Pre-training o…</text>
+</svg></section>
+  <section><h2>年份</h2><div class='bar'><span class='lab'>2017</span><span class='track'><span class='fill' style='width:100.0%'></span></span><span class='n'>1</span></div>
+<div class='bar'><span class='lab'>2020</span><span class='track'><span class='fill' style='width:100.0%'></span></span><span class='n'>1</span></div>
+<div class='bar'><span class='lab'>2019</span><span class='track'><span class='fill' style='width:100.0%'></span></span><span class='n'>1</span></div></section>
+  <section><h2>Venue</h2><div class='bar'><span class='lab'>NeurIPS</span><span class='track'><span class='fill' style='width:100.0%'></span></span><span class='n'>2</span></div>
+<div class='bar'><span class='lab'>NAACL</span><span class='track'><span class='fill' style='width:50.0%'></span></span><span class='n'>1</span></div></section>
+  <section><h2>获取方式 (access_status)</h2><div class='bar'><span class='lab'>fulltext</span><span class='track'><span class='fill' style='width:100.0%'></span></span><span class='n'>2</span></div>
+<div class='bar'><span class='lab'>abstract_only</span><span class='track'><span class='fill' style='width:50.0%'></span></span><span class='n'>1</span></div></section>
+  <section><h2>全文覆盖</h2><div class='bar'><span class='lab'>fulltext</span><span class='track'><span class='fill' style='width:100.0%'></span></span><span class='n'>2</span></div>
+<div class='bar'><span class='lab'>not_fulltext</span><span class='track'><span class='fill' style='width:50.0%'></span></span><span class='n'>1</span></div></section>
+  <section><h2>核验摘要</h2><p class='muted'>No audit in meta</p></section>
+  <section>
+    <h2>文献表</h2>
+    <table>
+      <thead><tr><th>Year</th><th>Venue</th><th>Title</th><th>Access</th><th>ID</th></tr></thead>
+      <tbody><tr><td>2017</td><td>NeurIPS</td><td>Attention Is All You Need</td><td>fulltext</td><td>1706.03762</td></tr><tr><td>2020</td><td>NeurIPS</td><td>Language Models are Few-Shot Learners</td><td>fulltext</td><td>2005.14165</td></tr><tr><td>2019</td><td>NAACL</td><td>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</td><td>abstract_only</td><td>1810.04805</td></tr></tbody>
+    </table>
+  </section>
+</main>
+<footer>MENTOR · survey-visualizer · data from references.json only</footer>
+</body>
+</html>
