@@ -1,0 +1,5 @@
+2026-07-14T10:00:00Z start exp001 lr=1e-3 epochs=3
+2026-07-14T10:05:00Z epoch=1 train_loss=1.20 val_acc=0.55
+2026-07-14T10:10:00Z epoch=2 train_loss=0.95 val_acc=0.68
+2026-07-14T10:15:00Z epoch=3 train_loss=0.80 val_acc=0.72
+2026-07-14T10:15:10Z done exp001 best_val_acc=0.72
