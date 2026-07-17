@@ -31,6 +31,8 @@ campus-research-output/<课题简称>/
 ├── first-practice.md        # F1 交付：首次练习
 ├── literature-landscape.md  # F2 交付：文献全景说明
 ├── reading-shortlist.md     # F2 交付：精读清单
+├── survey.md                # F2 可选扩展：长篇综述（survey-writer）
+├── related-work.md          # F2 可选扩展：论文 Related Work
 ├── progress-report.md       # F4 交付：阶段报告
 ├── artifact-index.md        # F4 交付：材料索引
 ├── result-summary.md        # F4 交付：结果摘要
