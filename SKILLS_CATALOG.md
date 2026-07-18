@@ -53,4 +53,5 @@
 2. **新技能立项**：先在本表登记（状态 = 骨架），再建目录；技能名用小写英文 + 连字符。
 3. **F4（progress-digest）** 已落地：演示话术与夹具见 `examples/f4-sample-run/`；脚本冒烟见 `tests/scripts/run_f4_script_smoke.py`。
 4. **F5（academic-writing）** 核心已落地：一体多文体包；夹具见 `examples/f5-sample-writeup/`；`adversarial-lite` 为可选骨架；不建 `meeting-brief`。
-5. 本表与 `AGENTS.md` §7 的技能清单保持同步；新增 / 删除技能时两处一起改。
+5. **后续方向（看板备忘）：** F4/F5 测试；F2/F5 写作能力打磨；`survey-visualizer` 审美加强。详见 [docs/开发进度-F2F4.md](./docs/开发进度-F2F4.md)。
+6. 本表与 `AGENTS.md` §7 的技能清单保持同步；新增 / 删除技能时两处一起改。
