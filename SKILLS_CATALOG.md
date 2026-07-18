@@ -10,10 +10,11 @@
 
 | # | 技能 | 目录 | 功能 | 类型 | 负责人 | 建议分支 | 状态 |
 |---|------|------|------|------|--------|----------|------|
-| 1 | 调度模块 | `skills/campus-research-orchestrator/` | 横切 | 用户入口 | 丁 | `feat/crosscut-writing` | 未开始 |
-| 2 | 工作区约定 | `skills/research-workspace/` | 横切 | 规程 | 丁 | `feat/crosscut-writing` | 未开始 |
-| 3 | 学术诚信 | `skills/academic-honesty/` | 横切 | 规程 | 丁 | `feat/crosscut-writing` | 未开始 |
-| 4 | 领域入门 | `skills/domain-onboarding/` | F1 | 工作流 | 甲 | `feat/f1-onboarding` | 未开始 |
+| 1 | 调度模块 | `skills/campus-research-orchestrator/` | 横切 | 用户入口 | 丁 | `feat/crosscut-writing` | 可演示 |
+| 2 | 工作区约定 | `skills/research-workspace/` | 横切 | 规程 | 丁 | `feat/crosscut-writing` | 可演示 |
+| 3 | 学术诚信 | `skills/academic-honesty/` | 横切 | 规程 | 丁 | `feat/crosscut-writing` | 可演示 |
+| 4 | 领域入门 | `skills/domain-onboarding/` | F1 | 工作流 | 甲 | `feat/f1-onboarding` | 可演示 |
+| 4b | 领域资源搜索 | `skills/domain-resource-search/` | F1 | 内部执行 | 甲 | `feat/f1-onboarding` | 可演示 |
 | 5 | 文献检索下载 | `skills/literature-search-download/` | F2 | 执行 | 乙 | `feat/f2-landscape` | 可演示 |
 | 6 | 文献精读入库 | `skills/literature-reader/` | F2+F3 | 执行 | 乙（丙复用） | `feat/f2-landscape` | 可演示 |
 | 7 | 文献全景撰写 | `skills/literature-landscape-writer/` | F2 | 执行 | 乙 | `feat/f2-landscape` | 可演示 |
