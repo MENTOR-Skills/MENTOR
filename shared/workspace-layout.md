@@ -16,8 +16,10 @@ campus-research-output/<课题简称>/
 ├── research-log.md          # 追加式工作记录（做了什么、为何停下）
 ├── _work/                   # 过程文件（可重建，技能升级不覆盖）
 │   ├── WAITING_*.md         # 正在等待用户完成的事项说明
+│   ├── selection-protocol.md # F2 扩展（survey-writer 系统梳理写法包）：选文与映射协议
 │   ├── shortlist.json       # 精读候选清单
-│   ├── claims-evidence.md   # 主张与证据对照表
+│   ├── claims-evidence.md   # F5：主张与证据对照表（成稿前必须）
+│   ├── adversarial-notes.md # F5 可选：挑刺意见（非终稿）
 │   └── state.yaml           # 当前功能、步骤、确认关卡状态
 ├── pdfs/
 │   ├── auto/                # 自动下载的开放获取全文（可重建）
@@ -40,9 +42,17 @@ campus-research-output/<课题简称>/
 ├── stage-writeup.md         # F5 交付：阶段技术说明
 ├── meeting-one-pager.md     # F5 交付：组会一页纸
 ├── qna-prep.md              # F5 交付：预期问答
+├── meeting-talk.md          # F5 拟新增：口播 / 汇报稿
+├── meeting-slides-outline.md # F5 拟新增：PPT 大纲（无 LaTeX 时只交此文件）
+├── meeting-slides.tex       # F5 拟新增：可选 Beamer
+├── tech-doc.md              # F5 拟新增：技术文档（或用户指定 ASCII 名）
+├── paper-section-<slug>.md  # F5 拟新增：论文节改写（slug 仅 ASCII）
+├── polish-<slug>.md         # F5 拟新增：润色稿（slug 仅 ASCII）
 └── viz/                     # F2 交付：关系图网页
     └── index.html
 ```
+
+F5 过程文件（在 `_work/`）：`claims-evidence.md`（成稿前必须）；可选 `adversarial-notes.md`（挑刺，非终稿）。交付**文件名仅 ASCII**。
 
 ---
 
