@@ -10,7 +10,7 @@ F4 **本地阶段总结**夹具：伪造最小课题目录（脚本 + 一次 run
 | 技能 | 本例角色 |
 |------|----------|
 | `progress-digest` | 主技能：索引材料并写阶段报告 |
-| （未跑）`meeting-brief` | 下游 F5；可读本例 `expected/` 四文件 |
+| （未跑）`academic-writing` | 下游 F5；可读本例 `expected/` 四文件（见 `examples/f5-sample-writeup/`） |
 
 ## 交付物是什么
 

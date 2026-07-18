@@ -16,7 +16,7 @@
 | 文献检索下载 | `literature-search-download/` | 分级检索、shortlist、OA 下载、付费墙停车 |
 | 文献精读入库 | `literature-reader/` | 写入 `references.json`（F3 可复用） |
 | 文献全景撰写 | `literature-landscape-writer/` | `literature-landscape.md` + `reading-shortlist.md` |
-| 综述撰写（扩展） | `survey-writer/` | 可选 `survey.md` / `related-work.md` |
+| 综述撰写（扩展） | `survey-writer/` | 四写法包：叙事 / 分类（默认）/ 系统梳理 / Related Work → `survey.md` 或 `related-work.md` |
 | 引用核对 | `citation-verifier/` | arXiv / CrossRef 核验 |
 | 关系可视化 | `survey-visualizer/` | `viz/index.html`（含 relations 图） |
 
@@ -32,4 +32,18 @@
 典型顺序：确认扫描范围与时间窗 → `list_recent_files.py` → 材料索引 → 精读证据 → 三份报告 → 路径/编码校验。  
 不另设 F4 空壳编排技能；下游组会材料由 F5 读取上述四文件。
 
-样例：`examples/`；可跑测试工作区：`tests/runs/`。
+## F5 学术写作（写作中枢）
+
+| 技能 | 目录 | 说明 |
+|------|------|------|
+| 学术写作 | `academic-writing/` | **唯一**写作工作流：选文体包 → `_work/claims-evidence.md` → 成稿 |
+| 挑刺审阅 | `adversarial-lite/` | 可选；只写 `_work/adversarial-notes.md`；标准档不默认开 |
+
+**不单独落地** `meeting-brief`：组会话术走 `academic-writing` 文体包（`meeting-one-pager` / `meeting-qna` / `meeting-talk` 等）。
+
+核心文体：一页纸、问答、口播、阶段说明。第二批薄模板：PPT 大纲、技术文档、论文节改写、润色。  
+Related Work / 长综述从零写 → F2 `survey-writer`，不进 F5。
+
+典型顺序：确认材料（F4 四文件和/或文献库）→ 选文体包 → 主张—证据 → 成稿 →（可选）挑刺。
+
+样例总览：`examples/`（含 `f5-sample-writeup/`）；可跑测试工作区：`tests/runs/`。

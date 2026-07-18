@@ -14,7 +14,7 @@ F2 **字段与交付形态联调夹具**：用 3 篇广为人知的 OA/arXiv 文
 | `survey-visualizer` | 生成 / 重建 `viz/index.html` |
 | `citation-verifier` | 可对 `references.json` 做存在性核验 |
 | （未跑）`literature-search-download` | 真实检索请另开 `tests/runs/` 盲测 |
-| （未跑）`survey-writer` | 见 `examples/f2-survey-extension/` |
+| （未跑）`survey-writer` | 见 `examples/f2-survey-extension/`（`survey.md` + `related-work.md`） |
 
 ## 交付物是什么
 

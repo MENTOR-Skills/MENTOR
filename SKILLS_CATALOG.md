@@ -19,12 +19,12 @@
 | 7 | 文献全景撰写 | `skills/literature-landscape-writer/` | F2 | 执行 | 乙 | `feat/f2-landscape` | 可演示 |
 | 8 | 引用核对 | `skills/citation-verifier/` | F2 | 自动程序 | 乙 | `feat/f2-landscape` | 可演示 |
 | 9 | 关系可视化 | `skills/survey-visualizer/` | F2 | 执行 | 乙 | `feat/f2-landscape` | 可演示 |
-| 9b | 综述撰写（扩展） | `skills/survey-writer/` | F2 扩展 | 执行 | 乙 | `feat/f2-landscape` | 骨架（长/标准综述能力仍缺） |
+| 9b | 综述撰写（扩展） | `skills/survey-writer/` | F2 扩展 | 执行 | 乙 | `feat/f2-landscape` | 可演示（扩展） |
 | 10 | 单篇深读 | `skills/paper-deep-read/` | F3 | 工作流 | 丙 | `feat/f3-deep-read` | 未开始 |
 | 11 | 阶段进展整理 | `skills/progress-digest/` | F4 | 工作流 | 乙 | `feat/f4-progress-digest` | 可演示 |
-| 12 | 学术写作 | `skills/academic-writing/` | F5 | 工作流 | 丁 | `feat/crosscut-writing` | 未开始 |
-| 13 | 组会材料包 | `skills/meeting-brief/` | F5 | 工作流 | 丁 | `feat/crosscut-writing` | 未开始 |
-| 14 | 挑刺审阅 | `skills/adversarial-lite/` | F5 | 内部 | 丁（可选） | `feat/crosscut-writing` | 未开始 |
+| 12 | 学术写作 | `skills/academic-writing/` | F5 | 工作流 | 丁 | `feat/crosscut-writing` | 可演示（薄） |
+| 13 | 组会材料包 | （不单独落地） | F5 | — | 丁 | — | **取消独立技能**：组会话术路由到 #12 文体包 |
+| 14 | 挑刺审阅 | `skills/adversarial-lite/` | F5 | 内部 | 丁（可选） | `feat/crosscut-writing` | 骨架（标准档不默认开） |
 
 ---
 
@@ -40,7 +40,9 @@
 | `shared/platform-notes.md` | 宿主平台安装与差异 | 草稿已审（部分配置待实测） |
 | `shared/scripts/check_encoding.py` | 交付前编码机械检查 | 可用 |
 | `docs/接口与协议.md` | 协作协议（冻结项以此为准） | 已确认 |
-| `docs/分工说明.md` | 第一周并行分工 + 乙侧 F2/F4 开发进度 | 已确认（进度节随 PR 更新） |
+| `docs/分工说明.md` | 第一周并行分工 + F2/F4/F5 开发进度 | 已确认（进度节随 PR 更新） |
+| `docs/开发进度-F2F4.md` | 周报短索引（含 F5 薄落地） | 随 PR 更新 |
+| `docs/F5设计提纲-扩大版.md` | F5 写作中枢扩大版设计与审批记录 | 已批；技能已薄落地 |
 | `docs/分支约定.md` | 分支与 PR 规则 | 已确认 |
 
 ---
@@ -50,4 +52,5 @@
 1. **状态变更**由负责人在对应 PR 中一并更新本表。
 2. **新技能立项**：先在本表登记（状态 = 骨架），再建目录；技能名用小写英文 + 连字符。
 3. **F4（progress-digest）** 已落地：演示话术与夹具见 `examples/f4-sample-run/`；脚本冒烟见 `tests/scripts/run_f4_script_smoke.py`。
-4. 本表与 `AGENTS.md` §7 的技能清单保持同步；新增 / 删除技能时两处一起改。
+4. **F5（academic-writing）** 核心已落地：一体多文体包；夹具见 `examples/f5-sample-writeup/`；`adversarial-lite` 为可选骨架；不建 `meeting-brief`。
+5. 本表与 `AGENTS.md` §7 的技能清单保持同步；新增 / 删除技能时两处一起改。

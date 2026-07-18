@@ -20,5 +20,6 @@
 |------|--------|
 | [`sample-topic/`](./sample-topic/) | F2 字段联调夹具：三篇经典文 + 全景 + 精读清单 + 关系图 |
 | [`f2-script-smoke/`](./f2-script-smoke/) | 纯脚本冒烟说明（产物生成在 `tests/runs/f2-script-smoke/`） |
-| [`f2-survey-extension/`](./f2-survey-extension/) | 长篇 `survey.md` 扩展样例（基于同一文献库） |
+| [`f2-survey-extension/`](./f2-survey-extension/) | F2 综述扩展：四写法包演示（`survey.md` + `related-work.md`） |
 | [`f4-sample-run/`](./f4-sample-run/) | F4 阶段总结夹具：假项目 + `expected/` 四份交付样例 |
+| [`f5-sample-writeup/`](./f5-sample-writeup/) | F5 写作夹具：基于 f4 expected 的主张—证据 + 一页纸 + 问答 |

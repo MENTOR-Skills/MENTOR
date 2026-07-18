@@ -111,4 +111,4 @@ python shared/scripts/check_encoding.py \
 - `references/result-summary-template.md`
 - `references/blockers-template.md`
 - `references/ignore-rules.md`
-- 上游：用户本地材料 + `scope.md`；下游：F5 `meeting-brief` / `academic-writing`（读本技能四文件）
+- 上游：用户本地材料 + `scope.md`；下游：F5 `academic-writing`（读本技能四文件）
