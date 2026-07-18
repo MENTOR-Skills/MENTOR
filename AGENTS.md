@@ -28,7 +28,7 @@
 
 | 用户意图关键词 | 进入功能 | 对应技能链 | 深度档 |
 |--------------|----------|-----------|--------|
-| "入门""不了解""完全陌生""怎么开始""学什么" | **F1 陌生领域入门** | `domain-onboarding` | 默认标准 |
+| "入门""不了解""完全陌生""怎么开始""学什么" | **F1 陌生领域入门** | `domain-onboarding` → `domain-resource-search` | 默认标准 |
 | "找论文""文献""综述""相关工作""有哪些经典""关系" | **F2 文献全景** | 调度 → 检索 → 精读入库 → 全景撰写 →（可选）综述撰写 → 可视化 | 默认标准 |
 | "读这篇""这篇论文""读懂""复现" | **F3 单篇深读** | `paper-deep-read` → `literature-reader` | 默认标准 |
 | "总结""进展""这周干了什么""阶段""日志""实验结果" | **F4 阶段总结** | `progress-digest` | 默认标准 |
@@ -36,7 +36,7 @@
 
 > F5 扩大版见 [docs/F5设计提纲-扩大版.md](./docs/F5设计提纲-扩大版.md) 与 `skills/academic-writing/`。Related Work / 长综述从零写 → F2 `survey-writer`，不进 F5。`adversarial-lite` 标准档不默认开。
 
-**关键词重叠时的优先级：** F4 > F3 > F5 > F2 > F1。例如用户同时提到"读论文"和"写组会材料"，先进入 F3 读，再进入 F5 写。
+**用户需求涉及多个功能时：** 按自然顺序建议串行（如「先入门再找论文」→ F1 后 F2；「读完论文写组会材料」→ F3 后 F5），向用户确认后依次执行。
 
 **无匹配时：** 列出五项功能的一句话描述，让用户选择。不要自行发明新功能。
 
@@ -123,6 +123,7 @@
 | 工作区 | `skills/research-workspace/` | 规程 | 初始化目录、检查 `scope.md` |
 | 学术诚信 | `skills/academic-honesty/` | 规程 | 成稿前勾选、全流程约束 |
 | 领域入门 | `skills/domain-onboarding/` | F1 工作流 | 个性化学习路径 |
+| 领域资源搜索 | `skills/domain-resource-search/` | F1 内部 | 3 渠道搜索（论文/学习资源/开源），被 domain-onboarding 调用 |
 | 文献检索下载 | `skills/literature-search-download/` | F2 执行 | 分级检索、去重、候选 |
 | 文献精读入库 | `skills/literature-reader/` | F2+F3 执行 | 写入结构化文献库 |
 | 文献全景撰写 | `skills/literature-landscape-writer/` | F2 执行 | 基于文献库写全景说明 |
