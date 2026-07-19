@@ -7,6 +7,7 @@
 tests/
 ├── README.md                 # 本说明（含 Cursor 前置步骤）
 ├── scripts/                  # 一键脚本冒烟
+│   ├── run_f1_script_smoke.py
 │   ├── run_f2_script_smoke.py
 │   └── run_f4_script_smoke.py
 └── runs/                     # 每次测试的工作区根（可重建）
@@ -24,20 +25,18 @@ tests/
 ### 1. 代码与分支
 
 1. 打开仓库中的 `MENTOR` 文件夹作为 Cursor 工作区根（或打开整仓但对话里约定工作目录为 `MENTOR`）。
-2. 确认已拿到含 F2 技能的分支（例如 `feat/f2-landscape`），且存在目录：
-   - `skills/literature-search-download/`
-   - `skills/literature-reader/`
-   - `skills/literature-landscape-writer/`
-   - `skills/survey-writer/`
-   - `skills/citation-verifier/`
-   - `skills/survey-visualizer/`
+2. 确认已拿到含对应技能的分支（F1/F2/F4/F5 现均在 `main`），且存在目录：
+   **F1:** `skills/domain-onboarding/`、`skills/domain-resource-search/`
+   **F2:** `skills/literature-search-download/`、`skills/literature-reader/`、`skills/literature-landscape-writer/`、`skills/survey-writer/`、`skills/citation-verifier/`、`skills/survey-visualizer/`
+   **F4:** `skills/progress-digest/`
+   **F5:** `skills/academic-writing/`
 
 ### 2. 把技能装进 Cursor（二选一）
 
 **A. 推荐（本仓库联调）**  
 在对话中明确：
 
-> 使用本仓库 `MENTOR/skills/` 下的 F2 技能，不要用我全局目录里可能过期的同名 skill。
+> 使用本仓库 `MENTOR/skills/` 下的技能，不要用我全局目录里可能过期的同名 skill。
 
 Agent 会按相对路径读 `SKILL.md` 与 `scripts/`。
 
@@ -66,7 +65,7 @@ New-Item -ItemType Directory -Force -Path tests/runs/my-blind-test/_work, tests/
 - `docs/接口与协议.md` §3 / §6（交付文件名与 `references.json` 字段）
 - `AGENTS.md` 全局禁令（不伪造引用、不绕付费墙）
 
-### 6. 发起盲测对话（示例话术）
+### 6. 发起盲测对话（F2 示例话术）
 
 > 工作区请使用 `tests/runs/my-blind-test/`。  
 > 帮我梳理「你的真实主题」（年份范围），给出精读建议和关系图。  
@@ -86,12 +85,55 @@ New-Item -ItemType Directory -Force -Path tests/runs/my-blind-test/_work, tests/
 
 ```powershell
 cd MENTOR
+python tests/scripts/run_f1_script_smoke.py
 python tests/scripts/run_f2_script_smoke.py
 python tests/scripts/run_f4_script_smoke.py
 ```
 
-产物分别写入 `tests/runs/f2-script-smoke/`、`tests/runs/f4-script-smoke/`。  
-F2 说明见 `examples/f2-script-smoke/README.md`；F4 说明见 `examples/f4-sample-run/README.md`。
+产物分别写入 `tests/runs/f1-script-smoke/`、`tests/runs/f2-script-smoke/`、`tests/runs/f4-script-smoke/`。  
+F1 说明见 `examples/f1-sample-run/README.md`；F2 说明见 `examples/f2-script-smoke/README.md`；F4 说明见 `examples/f4-sample-run/README.md`。
+
+### F1 盲测话术（新增）
+
+> **前置准备：** 
+> 1. 确认已拿到含 F1 技能的分支（`main`），且存在目录：
+>    - `skills/domain-onboarding/`
+>    - `skills/domain-resource-search/`
+> 2. 可选：`domain-packs/embodied-ai/` 存在（无内容包时 F1 仍可运行，直接走搜索+对话生成）
+> 3. 准备跑场目录：
+> ```powershell
+> cd MENTOR
+> New-Item -ItemType Directory -Force -Path tests/runs/f1-blind-test/_work, tests/runs/f1-blind-test/pdfs/user, tests/runs/f1-blind-test/pdfs/auto
+> ```
+> 4. 在 `tests/runs/f1-blind-test/scope.md` 写入主题、学生背景、深度档。
+
+**话术（具身智能场景）：**
+
+> 工作区请使用 `tests/runs/f1-blind-test/`。  
+> 我对具身智能完全不了解，学过 ML 入门和 Python，每周约 10 小时，想系统入门，偏机器人操纵方向。  
+> 按 F1：背景访谈 → 先搜索 → 基于搜索结果生成五件套 → 诚信声明。
+
+**话术（通用场景，不含领域内容包）：**
+
+> 工作区请使用 `tests/runs/f1-blind-test/`。  
+> 我想入门 <你的主题>，学过 <背景>，每周约 <N> 小时。  
+> 按 F1 流程帮我生成个性化入门材料。
+
+**检查点：**
+
+| 检查点 | 期望 |
+|--------|------|
+| 背景信息不足 | Agent 追问课程/方向/时间，至少收集 2 项后才继续 |
+| 搜索先于框架 | 在生成 glossary 之前，Agent 先做 3 渠道搜索；`_work/f1-search-results.md` 先于五件套出现 |
+| 全部渠道空结果 | Agent 停下问「是否降级为纯模型生成」；不可静默跳过 |
+| 术语表质量 | `glossary.md` ≤25 条，每条有来源标注；标注阅读顺序 |
+| 学习地图起点 | `learning-map.md` 对齐学生已有背景（不教已会的 ML 和 Python） |
+| 缺口分级 | `prerequisite-gap.md` 有 🔴 blocker / 🟡 建议补 / 🟢 可选 三级 |
+| 来源标签 | `starter-resources.md` 每条资源有 `search-verified` / `community-curated` / `model-suggested` 标签 |
+| 诚信声明 | `starter-resources.md` 末尾有来源统计 + 诚信勾选清单 |
+| 首次练习 | `first-practice.md` 有具体步骤 + 检验标准 + 常见坑，不是「读三篇论文」 |
+| 领域内容包匹配 | 若 `embodied-ai` 存在 → 术语表引用 `from-domain-pack`；若不存在 → 不停止，直接搜索+对话生成 |
+| 编码 | `python shared/scripts/check_encoding.py tests/runs/f1-blind-test` |
 
 ### F4 盲测话术（补充）
 

@@ -48,11 +48,20 @@
 
 ---
 
+## 开发工具（tools/，不交付终端用户）
+
+| 工具 | 用途 | 状态 |
+|------|------|------|
+| `tools/skill-creator/` | 新建 / 迁移技能的脚手架 + 采访引导 + DoD 校验 | 可用 |
+
+---
+
 ## 维护规则
 
 1. **状态变更**由负责人在对应 PR 中一并更新本表。
 2. **新技能立项**：先在本表登记（状态 = 骨架），再建目录；技能名用小写英文 + 连字符。
-3. **F4（progress-digest）** 已落地：演示话术与夹具见 `examples/f4-sample-run/`；脚本冒烟见 `tests/scripts/run_f4_script_smoke.py`。
-4. **F5（academic-writing）** 核心已落地：一体多文体包；夹具见 `examples/f5-sample-writeup/`；`adversarial-lite` 为可选骨架；不建 `meeting-brief`。
-5. **后续方向（看板备忘）：** F4/F5 测试；F2/F5 写作能力打磨；`survey-visualizer` 审美加强。详见 [docs/开发进度-F2F4.md](./docs/开发进度-F2F4.md)。
-6. 本表与 `AGENTS.md` §7 的技能清单保持同步；新增 / 删除技能时两处一起改。
+3. **F1（domain-onboarding）** 已落地：双技能架构；演示话术与夹具见 `examples/f1-sample-run/`；脚本冒烟见 `tests/scripts/run_f1_script_smoke.py`；进度见 `docs/开发进度-F1.md`。
+4. **F4（progress-digest）** 已落地：演示话术与夹具见 `examples/f4-sample-run/`；脚本冒烟见 `tests/scripts/run_f4_script_smoke.py`。
+5. **F5（academic-writing）** 核心已落地：一体多文体包；夹具见 `examples/f5-sample-writeup/`；`adversarial-lite` 为可选骨架；不建 `meeting-brief`。
+6. **后续方向（看板备忘）：** F1 Agent 盲测补全 + 搜索可重复性；F4/F5 测试；F2/F5 写作能力打磨；`survey-visualizer` 审美加强。详见 [docs/开发进度-F1.md](./docs/开发进度-F1.md)、[docs/开发进度-F2F4.md](./docs/开发进度-F2F4.md)。
+7. 本表与 `AGENTS.md` §7 的技能清单保持同步；新增 / 删除技能时两处一起改。
