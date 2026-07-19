@@ -20,7 +20,7 @@
 | 8 | 引用核对 | `skills/citation-verifier/` | F2 | 自动程序 | 乙 | `feat/f2-landscape` | 可演示 |
 | 9 | 关系可视化 | `skills/survey-visualizer/` | F2 | 执行 | 乙 | `feat/f2-landscape` | 可演示 |
 | 9b | 综述撰写（扩展） | `skills/survey-writer/` | F2 扩展 | 执行 | 乙 | `feat/f2-landscape` | 可演示（扩展） |
-| 10 | 单篇深读 | `skills/paper-deep-read/` | F3 | 工作流 | 丙 | `feat/f3-deep-read` | 未开始 |
+| 10 | 单篇深读 | `skills/paper-deep-read/` | F3 | 工作流 | 丙 | `feat/f3-deep-read` | 可演示 |
 | 11 | 阶段进展整理 | `skills/progress-digest/` | F4 | 工作流 | 乙 | `feat/f4-progress-digest` | 可演示 |
 | 12 | 学术写作 | `skills/academic-writing/` | F5 | 工作流 | 丁 | `feat/crosscut-writing` | 可演示（薄） |
 | 13 | 组会材料包 | （不单独落地） | F5 | — | 丁 | — | **取消独立技能**：组会话术路由到 #12 文体包 |

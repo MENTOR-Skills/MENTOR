@@ -8,6 +8,7 @@ tests/
 ├── README.md                 # 本说明（含 Cursor 前置步骤）
 ├── scripts/                  # 一键脚本冒烟
 │   ├── run_f2_script_smoke.py
+│   ├── run_f3_script_smoke.py
 │   └── run_f4_script_smoke.py
 └── runs/                     # 每次测试的工作区根（可重建）
     └── .gitkeep
@@ -87,11 +88,12 @@ New-Item -ItemType Directory -Force -Path tests/runs/my-blind-test/_work, tests/
 ```powershell
 cd MENTOR
 python tests/scripts/run_f2_script_smoke.py
+python tests/scripts/run_f3_script_smoke.py
 python tests/scripts/run_f4_script_smoke.py
 ```
 
-产物分别写入 `tests/runs/f2-script-smoke/`、`tests/runs/f4-script-smoke/`。  
-F2 说明见 `examples/f2-script-smoke/README.md`；F4 说明见 `examples/f4-sample-run/README.md`。
+F2/F4 产物分别写入 `tests/runs/f2-script-smoke/`、`tests/runs/f4-script-smoke/`。F3 只使用临时目录验证安全写回，并检查 `examples/f3-sample-run/` 恰好包含 `references.json`、阅读报告 Markdown 和同名 PDF。
+F2 说明见 `examples/f2-script-smoke/README.md`；F3 成品见 `examples/f3-sample-run/`；F4 说明见 `examples/f4-sample-run/README.md`。
 
 ### F4 盲测话术（补充）
 
@@ -112,7 +114,7 @@ F2 说明见 `examples/f2-script-smoke/README.md`；F4 说明见 `examples/f4-sa
 
 | 路径 | 角色 |
 |------|------|
-| `examples/<名>/` | 只读样例 + **必须有 README**（案例 / skills / 交付物） |
+| `examples/<名>/` | 只读样例；通常附 README。F3 成品例外，只保留已冻结的三项样例交付 |
 | `tests/runs/<名>/` | 可写跑场；可随时删 |
 
 不要把大体积 PDF 提交进仓库（见根目录 `.gitignore`）。

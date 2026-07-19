@@ -1,0 +1,9 @@
+mainfont: SimSun
+sansfont: Microsoft YaHei
+monofont: Consolas
+CJKmainfont: SimSun
+CJKsansfont: Microsoft YaHei
+CJKmonofont: Microsoft YaHei
+header-left: 论文阅读笔记
+header-right: \leftmark
+footer-center: \thepage
