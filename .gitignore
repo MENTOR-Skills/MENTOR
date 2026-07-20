@@ -23,6 +23,7 @@ campus-research-output/
 **/pdfs/
 *.pdf
 !examples/**/*.md
+!examples/f3-sample-run/reading-reports/1810.04805.pdf
 
 # 临时与日志
 *.log

@@ -9,6 +9,7 @@ tests/
 ├── scripts/                  # 一键脚本冒烟
 │   ├── run_f1_script_smoke.py
 │   ├── run_f2_script_smoke.py
+│   ├── run_f3_script_smoke.py
 │   └── run_f4_script_smoke.py
 └── runs/                     # 每次测试的工作区根（可重建）
     └── .gitkeep
@@ -25,9 +26,10 @@ tests/
 ### 1. 代码与分支
 
 1. 打开仓库中的 `MENTOR` 文件夹作为 Cursor 工作区根（或打开整仓但对话里约定工作目录为 `MENTOR`）。
-2. 确认已拿到含对应技能的分支（F1/F2/F4/F5 现均在 `main`），且存在目录：
+2. 确认已拿到含对应技能的分支（F1–F5 现均在 `main`），且存在目录：
    **F1:** `skills/domain-onboarding/`、`skills/domain-resource-search/`
    **F2:** `skills/literature-search-download/`、`skills/literature-reader/`、`skills/literature-landscape-writer/`、`skills/survey-writer/`、`skills/citation-verifier/`、`skills/survey-visualizer/`
+   **F3:** `skills/paper-deep-read/`（复用 `skills/literature-reader/`）
    **F4:** `skills/progress-digest/`
    **F5:** `skills/academic-writing/`
 
@@ -87,11 +89,13 @@ New-Item -ItemType Directory -Force -Path tests/runs/my-blind-test/_work, tests/
 cd MENTOR
 python tests/scripts/run_f1_script_smoke.py
 python tests/scripts/run_f2_script_smoke.py
+python tests/scripts/run_f3_script_smoke.py
 python tests/scripts/run_f4_script_smoke.py
 ```
 
 产物分别写入 `tests/runs/f1-script-smoke/`、`tests/runs/f2-script-smoke/`、`tests/runs/f4-script-smoke/`。  
-F1 说明见 `examples/f1-sample-run/README.md`；F2 说明见 `examples/f2-script-smoke/README.md`；F4 说明见 `examples/f4-sample-run/README.md`。
+F3 只使用临时目录验证安全写回，并检查 `examples/f3-sample-run/` 恰好包含 `references.json`、阅读报告 Markdown 和同名 PDF。  
+F1 说明见 `examples/f1-sample-run/README.md`；F2 说明见 `examples/f2-script-smoke/README.md`；F3 成品见 `examples/f3-sample-run/`；F4 说明见 `examples/f4-sample-run/README.md`。
 
 ### F1 盲测话术（新增）
 
@@ -154,7 +158,7 @@ F1 说明见 `examples/f1-sample-run/README.md`；F2 说明见 `examples/f2-scri
 
 | 路径 | 角色 |
 |------|------|
-| `examples/<名>/` | 只读样例 + **必须有 README**（案例 / skills / 交付物） |
+| `examples/<名>/` | 只读样例；通常附 README。F3 成品例外，只保留已冻结的三项样例交付 |
 | `tests/runs/<名>/` | 可写跑场；可随时删 |
 
 不要把大体积 PDF 提交进仓库（见根目录 `.gitignore`）。
